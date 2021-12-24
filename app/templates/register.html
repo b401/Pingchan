@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="static/login.css">
+{% endblock head %}
+{% block content %}
+</div>
+<div id="register">
+<form method="post" id="form" action={{ register }}>
+{{ form.username(value="Username") }}<br />
+{{ form.password() }}<br />
+{{ form.csrf_token }}
+{% with message = get_flashed_messages() %}
+{% if message %}
+{{ message[0] }}
+{% endif %}
+{% endwith %}
+<input type="submit">
+</form>
+</div>
+{% endblock content %}

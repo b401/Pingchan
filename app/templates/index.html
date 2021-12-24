@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="https://kit.fontawesome.com/7f6d371de7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/static/main.css">
+        <title> {{ PingChan }}</title>
+    </head>
+    <body>
+      <nav id="header">
+        <a href="/reports" class="navlink">Reports</a>
+        <p id="sec" >PingCastle</p>
+        <a href="/generate" class="navlink">Generate</a>
+      </nav>
+      <main>
+        {% for key, value in reports.items() %}
+        <li><a href={{value}}>{{ key }}</a></li>
+        {% endfor %}
+      </main>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% block head%}
+<link rel="stylesheet" href="/static/generate.css"/>
+{{super()}}
+{% endblock head%}
+
+{% block content %}
+
+<form method="post" id="form" action="/generate">
+<label for="Acquisition">Acquisition:</label>
+<input type="text" autofocus name="acquisition" id="acquisition"><br />
+<label for="Switches">Switches:</label>
+<input type="text" name="switches" id="switches" value="--healthcheck --api-endpoint {{ domain }} --encrypt"><br />
+<input type="submit">
+{% with message = get_flashed_messages() %}
+    {% if message %}
+        <p id="link">
+    	{% for i in message[0] %}
+	{{i}}<br>
+	{% endfor %}
+	</p>
+    {% endif %}
+{% endwith %}
+</form>
+{% endblock content %}

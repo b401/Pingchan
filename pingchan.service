@@ -1,0 +1,15 @@
+[Unit]
+Description=Start pingchan
+After=network.target
+
+[Service]
+Type=simple
+User=pingchan
+Environment=FLASK_ENV=production
+Environment=FLASK_APP=run.py
+ExecStart=/opt/pingchan/run.sh
+WorkingDirectory=/opt/pingchan/
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

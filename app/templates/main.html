@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+    <head>
+			{%block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/static/main.css">
+        <title> PingCastle Reporting </title>
+			{%endblock head %}
+    </head>
+    <body>
+      <nav id="header">
+        <a href="/" class="navlink">Reports</a>
+        <a href="/generate" class="navlink">Generate</a>
+        <a href="/upload" class="navlink">Upload</a>
+        <a href="/register" class="navlink">Register</a>
+        <a href="/logout" class="navlink">Logout</a>
+      </nav>
+      <main>
+				{%block content%}
+				{%endblock content%}
+      </main>
+    </body>
+</html>

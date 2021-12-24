@@ -1,0 +1,34 @@
+main {
+  display: flex !important;
+  min-height: calc(100vh - 16px); /* Or whatever */
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  margin-right: 15px;
+  width: 100px;
+	display: block;
+  color: black;
+}
+
+pre {
+  color: #fffaf0;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  padding: 5px;
+}
+
+th,td {
+  border-bottom: 1px solid black;
+}
+
+switches{
+    float: right;
+}

@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+{% block head%}
+<link rel="stylesheet" href="/static/generate.css"/>
+{{super()}}
+{% endblock head%}
+
+{% block content %}
+
+<form method="POST" id="form" action="/upload" enctype="multipart/form-data">
+	<input name="file" type="file"><br />
+	<input type="submit" value="Submit">
+</form>
+{% endblock content %}

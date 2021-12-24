@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="static/login.css">
+    <meta name="viewport" content="height=device-height,initial-scale=1.0">
+  </head>
+  <body>
+    <main>
+				<form method="post" id="form" action={{ register }}>
+				{{ form.username(value="Username") }}<br>
+				{{ form.password() }}
+				<input type="submit" style="display: none">
+				{{ form.csrf_token }}
+				{% with message = get_flashed_messages() %}
+				{% if message %}
+        <div id="flash">
+				{{ message[0] }}
+        </div>
+				{% endif %}
+				{% endwith %}
+				</form>
+    </main>
+  </body>
+</html>

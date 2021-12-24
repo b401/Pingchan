@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block content %}
+<table>
+	<tbody>
+		{% for key, value in reports.items() %}
+		<tr class="flexbox">
+		<td class="report_pic"></td>
+		<td class="link"><a href="/reports/{{value['report']}}">{{ key }}</a></td>
+		<td class="date">{{value['date']}}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}
