@@ -27,4 +27,4 @@ Initial deployment is a little hacky
 
 ## Updating/Installation
 
-Download official binary from https://github.com/vletoux/pingcastle and replace the PingCastle.exe + PingCaslte.exe.config in the src directory.
+Download official binary from https://github.com/vletoux/pingcastle and add the PingCastle.exe + PingCaslte.exe.config to the src directory.
